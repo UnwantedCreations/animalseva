@@ -691,7 +691,8 @@
             <p>Once a donation receipt is issued for tax exemption purposes under Section 80G of the Income Tax Act, we are unable to process a refund for that specific donation.</p>
         </div>
     </section>
-<!-- PRIVACY POLICY PAGE (Hidden by default) -->
+
+    <!-- PRIVACY POLICY PAGE (Hidden by default) -->
     <section id="privacy-page" class="d-none">
         <div class="page-header text-center">
             <div class="container">
@@ -716,6 +717,7 @@
             <p>We may use cookies to enhance your experience on our website. You can choose to turn off all cookies via your browser settings, but some features of the site may not function properly.</p>
         </div>
     </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -771,6 +773,7 @@
             const contactPage = document.getElementById('contact-page');
             const termsPage = document.getElementById('terms-page');
             const refundsPage = document.getElementById('refunds-page');
+            const privacyPage = document.getElementById('privacy-page');
             
             // Helper to hide all
             const hideAll = () => {
@@ -778,6 +781,7 @@
                 contactPage.classList.add('d-none');
                 termsPage.classList.add('d-none');
                 refundsPage.classList.add('d-none');
+                privacyPage.classList.add('d-none');
             };
 
             // Scroll to top when switching 'pages'
@@ -794,6 +798,10 @@
             } else if (hash === '#refunds') {
                 hideAll();
                 refundsPage.classList.remove('d-none');
+                scrollTop();
+            } else if (hash === '#privacy') {
+                hideAll();
+                privacyPage.classList.remove('d-none');
                 scrollTop();
             } else {
                 // Default / Home / Landing Page sections
